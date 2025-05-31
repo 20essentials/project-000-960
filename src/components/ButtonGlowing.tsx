@@ -1,7 +1,9 @@
 import '@/styles/ButtonGlowing.css';
 import { useMultiCounter } from '@/store/useMultiCounter';
+import { withBase } from '@/utils/functionsTs'
 
 export const ButtonGlowing = () => {
+  const url = withBase('assets/plus.png');
   const increase = useMultiCounter(state => state.increase);
 
   function handleclick(e: React.MouseEvent<HTMLLabelElement>) {
@@ -13,7 +15,7 @@ export const ButtonGlowing = () => {
     <label className='glowingbutton' onClick={handleclick}>
       <input className='am-input' type='checkbox' />
       <span className='am-span'></span>
-      <img src='/assets/plus.png' alt='Plus Img' className='am-plus' />
+      <img src={url} alt='Plus Img' className='am-plus' />
     </label>
   );
 };
