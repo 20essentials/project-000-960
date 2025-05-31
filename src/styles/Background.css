@@ -1,0 +1,30 @@
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #0f172a; 
+  overflow: hidden;
+}
+
+.circle-left,
+.circle-right {
+  position: absolute;
+  top: -10%;
+  bottom: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle farthest-side,
+    rgba(255, 0, 182, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.circle-left {
+  left: -20%;
+}
+
+.circle-right {
+  right: -20%;
+}
